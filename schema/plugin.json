@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyter-cat2cloud",
+  "description": "jupyter-cat2cloud settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}

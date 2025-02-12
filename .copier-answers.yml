@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.7
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: francesc@ironarray.io
+author_name: Francesc Alted
+has_binder: false
+has_settings: true
+kind: frontend
+labextension_name: jupyter-cat2cloud
+project_short_description: Integration of JupyterLab with Cat2Cloud
+python_name: jupyter_cat2cloud
+repository: https://github.com/ironArray/jupyter-cat2cloud
+test: false
+
