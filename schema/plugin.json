@@ -4,5 +4,22 @@
   "description": "jupyter-cat2cloud settings.",
   "type": "object",
   "properties": {},
-  "additionalProperties": false
+  "additionalProperties": false,
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-example-menu",
+        "label": "Cat2Cloud",
+        "rank": 3000,
+        "items": [
+          {
+            "command": "jlab-examples:main-menu",
+            "args": {
+              "origin": "from the menu"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }
