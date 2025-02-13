@@ -8,15 +8,12 @@
   "jupyter.lab.menus": {
     "main": [
       {
-        "id": "jp-mainmenu-example-menu",
+        "id": "jp-mainmenu-cat2cloud-menu",
         "label": "Cat2Cloud",
         "rank": 3000,
         "items": [
           {
-            "command": "jlab-examples:main-menu",
-            "args": {
-              "origin": "from the menu"
-            }
+            "command": "jlab-cat2cloud:main-menu"
           }
         ]
       }

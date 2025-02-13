@@ -24,12 +24,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     // Add a command
     const { commands } = app;
-    const command = 'jlab-examples:main-menu';
-    commands.addCommand(command, {
+    commands.addCommand('jlab-cat2cloud:main-menu', {
       label: 'Upload to server',
       caption: 'Upload to server',
       execute: (args: any) => {
-        console.log(`Hello ${args['origin']}.`);
         const currentWidget = notebookTracker.currentWidget; // panel
         if (currentWidget !== null) {
           if (currentWidget.model !== null) {
