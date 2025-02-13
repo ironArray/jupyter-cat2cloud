@@ -20,8 +20,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
     notebookTracker: INotebookTracker,
     settingRegistry: ISettingRegistry | null
   ) => {
-    console.log('JupyterLab extension jupyter-cat2cloud is activated!');
-
     // Add a command
     const { commands } = app;
     commands.addCommand('jlab-cat2cloud:main-menu', {
@@ -31,7 +29,14 @@ const plugin: JupyterFrontEndPlugin<void> = {
         const currentWidget = notebookTracker.currentWidget; // panel
         if (currentWidget !== null) {
           if (currentWidget.model !== null) {
-            console.log('String', currentWidget.model.toString());
+            const url = new URL(window.location.href);
+            const path = url.searchParams.get('path') || '';
+            const filename = path.split('/').pop();
+            const content = currentWidget.model.toString();
+            const blob = new Blob([content]);
+            const formData = new FormData();
+            formData.append('file', blob, filename);
+            fetch(`/api/upload/${path}`, { method: 'POST', body: formData });
           }
         }
       }
@@ -50,6 +55,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
           );
         });
     }
+
+    console.log('JupyterLab extension jupyter-cat2cloud is activated!');
   }
 };
 
